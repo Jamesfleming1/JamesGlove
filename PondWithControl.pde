@@ -17,7 +17,7 @@ Serial myPort;
 String val;
 int x= 700/2 ;
 int y= 30;
-int speed = 3;
+int speed = 2;
 void serialEvent(Serial myPort){
   val = myPort.readString();
   if (val != null){
@@ -67,6 +67,8 @@ void mousePressed(){
     if(fishRemaining == 0){
       numFish +=5;
     }
+    x = 700/2;
+    y = 30;
     load();
     scene = true;
     fishRemaining = numFish;
